@@ -481,3 +481,33 @@ h1, h2, h3, h4, h5, h6, p {
 	transform: translate(-50%, -50%);
 	z-index: 1;
 }
+
+/* descript */
+
+.descript{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -15px;
+	padding-top: 30px;
+	margin-bottom: 146px;
+}
+
+.descript__pocess{
+	width: 25%;
+	max-width: 263px;
+	padding: 0 15px;
+}
+
+.descript__header{
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 23px;
+	color: #5d5d5d;
+	text-transform: uppercase;
+}
+
+.descript__text{
+	font-size: 15px;
+	font-weight: 400;
+	color: #8f8f8f;
+}
