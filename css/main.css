@@ -74,16 +74,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 	
 }
-
-
 .nav__contact{
 	position: relative;
 	padding: 0 20px 0 0;
 
 	color: #ffffff;
 	text-decoration: none;
-
-
 }
 
 .nav__contact::after {
@@ -98,7 +94,6 @@ h1, h2, h3, h4, h5, h6, p {
 	transform: rotate(90deg);
 	background-color: #5e5e5e;
 }
-
 .nav__menu{
 
 	color: #ffffff;
@@ -129,7 +124,6 @@ h1, h2, h3, h4, h5, h6, p {
 	outline: 0; 
 	
 } 
-
 .nav-toggle__item{
 
 	width: 100%;
@@ -329,7 +323,7 @@ h1, h2, h3, h4, h5, h6, p {
 /* graph__item--left */
 
 .graph__item--left{
-	
+
 	background-color: #f8f8f8;
 	padding: 100px 127px 76px 100px;
 
@@ -395,5 +389,95 @@ h1, h2, h3, h4, h5, h6, p {
 	font-weight: 300;
 }
 
+/*--- section OUR PROCESS ---*/
 
+.section__header{
+	text-align: center;
+	margin-top: 150px;
+}
 
+.section__title{
+	font-size: 72px;
+	font-weight: bold;
+	color: #404040;
+}
+
+.section__title:after{
+	content: "";
+	display: block;
+	width: 33px;
+	height: 1px;
+
+	background-color:#f38181;
+
+	margin: 30px auto;
+}
+
+.section__text{
+	font-size: 24px;
+	font-weight: 200;
+	color: #5d5d5d;
+}
+
+/* pocess */
+.wrapper__process{
+	
+
+}
+
+.pocess{
+	display: flex;
+	justify-content: center;
+	margin: 0 70px 0 70px;
+	padding: 250px 0 230px 0;
+}
+
+.pocess__item{
+	display: flex;
+	position: relative;
+	
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+ .pocess__item--one{
+  	 width: 17%;
+}
+
+.pocess__item--two{
+	 width: 30.4%;
+}
+
+.pocess__item--three{
+	 width: 37.9%;
+}
+
+.pocess__item--four{
+		width: 15%;
+}
+
+.pocess__img{
+	
+	display: block;
+	height: auto;
+	
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;         
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.text{
+	
+	font-size: 24px;
+	font-weight: 400;
+	position: absolute;
+	display:block;
+	top: 50%;
+	left: 50%;         
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
