@@ -154,6 +154,8 @@
 		</div>
 	</section>
 
+<!-- section__services -->
+
 	<section class="section__services">
 
 		<div class="container__services">
@@ -268,10 +270,65 @@
 						</div>
 					</div>
 				</div>
-		</div>
+		</div> <!-- container__services -->
+	</section>
 
+<!-- section__nextStep -->
+	<section class="section__nextStep">
+
+		<div class="logo__symbol">
+			<img src="img/NextStep/LogoSymbol_03.png">
+		</div>
+		<div class="container">
+			<div class="section__header">
+				<div class="section__title">take <span class="color__text"> the next </span>step</div>
+				<div class="section__text">Do you need our help to your brand to its fullest potential?<br>Let us know how we can help you</div>
+			</div>	
+		</div>	
+		
+
+		<div class="container">
+			<div class="container__formWraper">
+				
+				<form novalidate class="contact_form" action="" method="post" name="contact_form"> 
+					<ul>
+
+						<li>
+							<label for="name"> Name</label>
+							<input type="text" name="name" placeholder="John Doe" required/>  
+						</li>
+
+						<li>
+							<label for="email">Email</label>
+							<input type="email" name="email" placeholder="email format" required/>
+						</li>
+
+						<li>
+							<label for="phon">Telephone</label>
+							   <input type="tel" name="phone" placeholder="+380..." required  pattern="+3|0" minlength="13" maxlength="13"/> 
+							<!-- 1) Атрибут required перед отправкой нужно внести изменения;  
+							2)Атрибут pattern пременяется для валидации значения поля -->
+							<!--    <span class="form_hint"> Укажите пожалуйста свой телефон</span>-->
+									</li>
+						<li>
+							<label for="message">Message:</label>
+							<textarea  name="message" id="" cols="1" rows="1" required></textarea>
+							</li>
+
+						<li>
+							<button class="submit" type="submit">Submit</button>
+						</li>
+
+					</ul>
+				</form>  
+  			</div> <!--container__formWraper -->
+		</div> <!-- container-->
 	</section>
 
 
+
+
+		
 </body>
 </html>
+
