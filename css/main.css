@@ -27,14 +27,16 @@ h1, h2, h3, h4, h5, h6, p {
 /*---- header---- */
 .container__header{
 	width: 100%;
- 	max-width: 1800px;
- 	padding: 0 15px;
+ 	max-width: 1840px;
  	margin: 0 auto;
 }
 
 .header{
+	width: 100%;
+	padding: 70px 65px 10px 65px;
+
 	position: absolute;
-	top:70px;
+	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 1000; 
@@ -46,7 +48,6 @@ h1, h2, h3, h4, h5, h6, p {
 	align-items: baseline;
 }
 	
-
 .header__logo{
 	display: flex;
 	align-items: baseline;
@@ -57,6 +58,8 @@ h1, h2, h3, h4, h5, h6, p {
 	font-weight: bold;
 	text-transform: uppercase;
 	color:#ffffff;
+
+	padding: 0 5px 0 5px;
 }
 
 /* nav */
@@ -65,12 +68,11 @@ h1, h2, h3, h4, h5, h6, p {
 	display: flex;
 	text-transform: uppercase;
 	font-size: 24px;
-
-	
 }
+
 .nav__contact{
 	position: relative;
-	padding: 0 20px 0 0;
+	padding-right: 20px;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -81,60 +83,61 @@ h1, h2, h3, h4, h5, h6, p {
 	width: 24px;
 	height: 1px;
 	position: absolute;
-	top: 50%;
+	top: 49%;
 	right: -11px;
 	z-index: 1;
 	transform: rotate(90deg);
 	background-color: #5e5e5e;
 }
+
 .nav__menu{
 	color: #ffffff;
 	text-decoration: none;
-	padding: 0 110px 0 20px;
+	padding: 0 20px 0 20px;
 }
 
 /* nav__toggle */
-/* .nav__toggle {
-	width: 30px;
-	padding: 10px 0;
+
+.nav__toggle {
+
 	display: block; 
 
+	width: 30px;
+
+	/* обнуление стилей кнопки */
 	font-size: 0;
 	color: transparent;
-
 	border: 0;
 	background: none;
+	outline: 0;  /* все границы обнуление */
 	cursor: pointer;
 
-	position: absolute;
-	
-	top: 38px;
-	right: 74px;
-	z-index: 1;
+	position: relative;
 
-	outline: 0; 
-	
-}  */
-/* .nav__toggle__item{
+} 
+
+.nav__toggle__item{
 
 	width: 100%;
-	height: 3px;
+	margin: auto;
+	height: 1px;
 
 	background-color: #fff;
-
+	
+	border-bottom: 0;
 	display: block;
 
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 50%;
 	left: 0;
-	border-bottom: 0;
-	margin: auto;
+	right: 0;
 
+	
 	transition: background .2s linear;
-} */
-/* 
-.nav__toggle.active, .nav__toggle__item {
+
+}
+
+.nav__toggle.active{
     background: none;
 }
 
@@ -142,25 +145,28 @@ h1, h2, h3, h4, h5, h6, p {
 .nav__toggle__item:after{
 	content: "";
 	width: 100%;
-	height: 3px;
+	height: 1px;
 
 	background-color: #fff;
  
 	position: absolute;
-	left: 0;
+	left:0;
+	
 	z-index: 1;
 
 	transition: transform .2s linear;
-} */
+}
 
-/* .nav__toggle__item:before{
+
+.nav__toggle__item:before{
 	top: -8px;
 }
+
 .nav__toggle__item:after{
 	bottom: -8px;
 }
 
-.nav__toggle.active, .nav__toggle__item:before {
+/* .nav__toggle.active, .nav__toggle__item:before {
     transform-origin: left top;
     transform: rotate(45deg) translate3d(0px, -2px, 0)
 }
@@ -178,7 +184,7 @@ h1, h2, h3, h4, h5, h6, p {
 	justify-content: center;
 	width: 100%;
 	height: 100vh;
-	min-height: 1000px;
+	min-height: 900px;
 	position: relative;
 
 	background: url("../img/header/Anveshan_01.jpg") center no-repeat;
@@ -187,36 +193,31 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .intro__inner{
-	width: 100%;
-	max-width: 850px;
-	text-align: center;
-	margin: 0 auto;
-	font-weight: bold;
-	color: #ffffff;
 
-/* выравние не по центру  */
-	position: absolute;
-	top: 40%;
-	left: 50%;         
-	transform: translate(-50%, -60%);
-	z-index:1;
+	width: 100%;
+	max-width: 810px;
+	margin: 360px auto 560px;
+
+	text-align: center;
+	color: #ffffff;
 }
 
-.intro__firstTitle{
-	line-height: 1;
+.intro__titleFirst{
   	font-size: 73px;
+  	font-weight: 600;
+  	line-height: 1;
 	color: #ffffff;
 	text-transform: uppercase;
 }
 
-.intro__title{
+.intro__titleMiddle{
 	line-height: 1;
 	font-size: 73px;
 	color: #ed322d;
 	text-transform: uppercase;
 }
 
-.intro__secondTitle{
+.intro__titleSecond{
 	font-size: 20px;
 	color: #9a939d;
 	font-weight:100;
@@ -231,7 +232,7 @@ h1, h2, h3, h4, h5, h6, p {
 	height: 50px;
 
 	position: absolute;
-    top: 80%;  
+    top: 85%;  
     left: 50%; 
 
   	transform: translate(-50%, -50%);
@@ -267,7 +268,7 @@ h1, h2, h3, h4, h5, h6, p {
 .graph__img{
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 /* commit */
@@ -285,6 +286,7 @@ h1, h2, h3, h4, h5, h6, p {
 	max-width: 234px;
 
 }
+
 .commit__img{
 	position: absolute;
 
@@ -303,12 +305,14 @@ h1, h2, h3, h4, h5, h6, p {
 	color: #757575;
 	
 }
+
 .commit__text{
 	font-size:14px;
 	font-weight: 300;
 	color: #333;
 	
 }
+
 /* graph__item--left */
 
 .graph__item--left{
@@ -317,10 +321,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
-
 .graph__title span{
 	color: #ed322d;
 }
+
 .graph__title{
 	max-width: 487px;
 	padding-bottom: 40px;
@@ -382,7 +386,6 @@ h1, h2, h3, h4, h5, h6, p {
     background-size: cover;
 	-webkit-background-size: cover;
 	position: relative;
-	z-index: -1;
 }
 
 .section__nextStep{
@@ -431,10 +434,7 @@ h1, h2, h3, h4, h5, h6, p {
 	font-size: 24px;
 	font-weight: 200;
 	color: #5d5d5d;
-
 }
-
-
 
 /* pocess */
 
@@ -525,8 +525,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* services */
-
-
 
 .container__services{
 	width: 100%;
@@ -639,34 +637,43 @@ h1, h2, h3, h4, h5, h6, p {
 	max-width: 945px;
 	width: 100%;
 	margin: 0 auto;
-	padding-top: 120px;	
+	padding: 120px 225px 100px 225px;	
 	background-color: #fff;
 	border: 1px solid #dfdfdf;
 
 }
 
+.contact_form{
+	width: 100%; 
+	margin: 0 auto;
+
+}
+
 .contact_form ul{
-    width: 100%; 
-    max-width: 520px;
+
     list-style-type: none;
     list-style-position: outside;
     padding: 0; 
-    margin: 0 auto;
-}
-
-.contact_form label{  /* название строки*/
-    width: 140px; 
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 200;
-    color: #8e8e8e;
+    margin: 0;
+    
 }
 
  .contact_form li{  /* каждая строка  */
-    margin-top: 50px;
-    padding: 0 0 15px 10px; 
+    margin-top: 45px;
+    padding: 0 0 10px 10px; 
     border-bottom: 1px solid #eee;
     position: relative;
+}
+
+.contact_form label{  /* название строки*/
+
+    width: 80px; 
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.5;
+    color: #8e8e8e;
+
 }
 
  .contact_form input{  /*в нутри поля */
@@ -707,6 +714,7 @@ h1, h2, h3, h4, h5, h6, p {
 .contact_form li:last-child{
     border-bottom:none;
 }
+
 /* Button Staly */
 
 .contact_form .submit{
@@ -724,4 +732,49 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
     left: 50%;
     transform: translatex(-50%);
+}
+
+/* footer */
+
+.footer__wrapper{
+	background-color: #fff;
+	max-width: 250px;
+	width: 100%;
+	margin: 0 auto 75px;
+
+}
+.footer__icon{
+	margin-top: 70px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__icon img{
+	display: block;
+	cursor: pointer;
+}
+
+.footer__text{
+	margin-top: 35px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	color: #969696;
+}
+
+.footer__text span{
+	padding-top: 20px;
+	display: block;
+}
+
+.footer__designed{
+	font-size: 17px;
+	font-weight: 600;
+	color: #969696;
+	padding-top: 60px;
+	text-align: center;
+}
+.footer__designed span{
+	color: #db2e2e;
+	text-transform: uppercase;
 }
