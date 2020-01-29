@@ -1,47 +1,52 @@
 $(function() {
+  let header = $("#header"),
+    introH = $("#intro").outerHeight(),
+    scrollOffset = $(window).scrollTop(),
+    headerH = $("#header__inner").outerHeight();
+  checkScroll(scrollOffset);
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
+  $(window).on("scroll", function() {
+    scrollOffset = $(this).scrollTop();
+    scrollOffset = scrollOffset;
+    checkScroll(scrollOffset);
+  });
 
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
+  function checkScroll(scrollOffset) {
+    let offsetIntro = introH - headerH;
+    if (scrollOffset >= offsetIntro) {
+      header.addClass("fixed");
+      $("#header__inner").addClass("bgColor");
+    } else {
+      header.removeClass("fixed");
+      $("#header__inner").removeClass("bgColor");
+    }
+  }
 
-	//Chrome Smooth Scroll
-	try {
-		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
+  $("[data-scroll]").on("click", function(event) {
+    event.preventDefault();
 
-	};
+    let $this = $(this),
+      blockId = $this.data("scroll"),
+      blockOffset = $(blockId).offset().top - headerH;
+    console.log(blockOffset);
 
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
-	
-});
+    $("html, body").animate(
+      {
+        scrollTop: blockOffset
+      },
+      600
+    );
+  });
 
-$(window).load(function() {
+  $("#nav__toggle").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass("active");
+    $("#nav__list").toggleClass("show");
+  });
 
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
-
+  $("#nav__menu").on("click", function(event) {
+    event.preventDefault();
+    $("#nav__toggle").toggleClass("active");
+    $("#nav__list").toggleClass("show");
+  });
 });

@@ -16,8 +16,8 @@
 
 <body>
     <header class="header" id="header">
-        <div class="container__header">
-            <div class="header__inner">
+        <div class="container__header" >
+            <div class="header__inner" id="header__inner">
                 <div class="header__logo">
                     <img class="header__img__left" src="img/header/logo_03.png" alt="">
                     <div class="header__text">anveshan</div>
@@ -25,15 +25,25 @@
                 </div>
 
                 <nav class="nav" id="nav">
-                    <a class="nav__contact" id="contact" href="#">contact</a>
-                    <a class="nav__menu" id="menu" href="#">menu</a>
+                    <a class="nav__contact" data-scroll="#footer"  href="#">contact</a>
 
-                    <button class="nav__toggle" id="nav__toggle" type="button">
-                        <span class="nav__toggle__item">menu</span>
+                    <a class="nav__menu " id="nav__menu" href="#">menu</a>
+
+                    <button id="nav__toggle" class="nav__toggle" type="button">
                     </button>
                 </nav>
-
             </div>
+        </div>
+
+        <div class="header__wraper-navlist">
+            <nav class="nav__list show" id="nav__list">
+                <a class="nav__link" href="#" data-scroll="#intro">about</a>
+                <a class="nav__link" href="#" data-scroll="#graph">quisque<span> &#38; </span> siter amet</a>
+                <a class="nav__link" href="#" data-scroll="#process">our process</a>
+                <a class="nav__link" href="#" data-scroll="#services">terms <span>&#38; </span> services</a>
+                <a class="nav__link" href="#" data-scroll="#feedback">feedback</a>
+                <a class="nav__link" href="#" data-scroll="#footer">contact</a>
+            </nav>
         </div>
     </header>
 
@@ -47,7 +57,6 @@
                 <div class="intro__titleSecond">
                     <p>Anveshan is a research and analysis consultants that helps to make solid decisions and drive results.</p>
                 </div>
-
             </div>
         </div>
     </div>
@@ -55,24 +64,23 @@
     <!-- slider -->
 
     <div class="slider">
-        <div class="btn__slider">
+        <div class="btn__slider" data-scroll="#graph">
             <img src="img/header/maus.png" alt="">
             <div>scroll</div>
         </div>
     </div>
 
-    <!-- graph -->
+    <!-- section__graph -->
 
-    <section class="section section__graph ">
+    <section class="section__graph" id="graph">
 
         <div class="graph">
             <div class="graph__item">
                 <img class="graph__img" src="img/Graph/Anveshan_02.jpg" alt="">
 
                 <div class="commit">
-                    <div class="commit__text">
-                        <img class="commit__img" src="img/Graph/Anvesha1111n_05.png" alt="">
-
+                    <img class="commit__img" src="img/Graph/Anvesha1111n_05.png" alt="">
+                    <div class="commit__wrapper">
                         <div class="commit__title">Interdum tincidunt</div>
                         <div class="commit__text">nec laoreet volutpat, mi diam consectetur nisl, a vestibulum enimer</div>
                     </div>
@@ -100,39 +108,33 @@
         </div>
     </section>
 
-    <section class="section">
+    <!-- section__process -->
+
+    <section class="section__process" id="process">
         <div class="container">
             <div class="section__header">
                 <div class="section__title">
-                    <h2>Our Process</h2>
+                    Our Process
                 </div>
                 <div class="section__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet volutpat, mi diam consectetur nisl, a vestibulum enim ligula a enim. Phasellus nec convallis lorem. Vestibulum a vestibulum enim ligula a enim. Phasellus nec convallis lorem.</div>
             </div>
 
+            <div class="pocess">
 
-            <div class="wrapper__process">
-                <div class="pocess">
+                <div class="pocess__one">
+                    <div class=" pocess__text">meeting</div>
+                </div>
 
-                    <div class="pocess__item pocess__item--one">
-                        <img class="pocess__img" src="img/OurProcess/1.png" alt="">
-                        <span class="text">meeting</span>
-                    </div>
+                <div class="pocess__two">
+                    <div class="pocess__text">Planning &#38; organizing</div>
+                </div>
 
-                    <div class="pocess__item pocess__item--two">
-                        <img class="pocess__img" src="img/OurProcess/2.png" alt="">
-                        <span class="text">Planning & organizing</span>
-                    </div>
+                <div class="pocess__three">
+                    <div class="pocess__text">execute</div>
+                </div>
 
-                    <div class="pocess__item pocess__item--three">
-                        <img class="pocess__img" src="img/OurProcess/3.png" alt="">
-                        <span class="text">execute</span>
-                    </div>
-
-                    <div class="pocess__item pocess__item--four">
-                        <img class="pocess__img" src="img/OurProcess/4.png" alt="">
-                        <span class="text">deliver</span>
-                    </div>
-
+                <div class="pocess__four">
+                    <div class="pocess__text">deliver</div>
                 </div>
             </div>
 
@@ -144,7 +146,7 @@
                 </div>
 
                 <div class="descript__pocess">
-                    <div class="descript__header">Planning & organizing</div>
+                    <div class="descript__header">Planning &#38; organizing</div>
                     <div class="descript__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sollicitudin augue. Sed dui quam, molestie at semper vitae, sagittis eu justo.</div>
                 </div>
 
@@ -164,14 +166,14 @@
 
     <!-- section__services -->
 
-    <section class="section__services">
+    <section class="section__services" id="services">
 
         <div class="container__services">
 
             <div class="container">
-                <div class="section__header">
-                    <div class="container__title ">services <span>&</span> terms</div>
-                    <div class="container__text">Vestibulum tempor interdum tincidunt. Nam feug iat, metus nec laoreet volutpat, mi diam consectetur nisl, a vestibulum enim ligula a enim. Phasellus nec convallis lorem. Vestibulum a vestibulum enim ligula a enim. Phasellus nec convallis lorem. </div>
+                <div class="section__header services__header">
+                    <div class="section__title services__title"> terms<span> &#38; </span>services </div>
+                    <div class="section__text services__text-title">Vestibulum tempor interdum tincidunt. Nam feug iat, metus nec laoreet volutpat, mi diam consectetur nisl, a vestibulum enim ligula a enim. Phasellus nec convallis lorem. Vestibulum a vestibulum enim ligula a enim. Phasellus nec convallis lorem. </div>
                 </div>
             </div>
 
@@ -182,7 +184,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Adipisecting</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
                 </div>
@@ -192,7 +194,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Sit amet consectetur</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
 
@@ -203,7 +205,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Adipisecting</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
                 </div>
@@ -217,7 +219,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock services__rightBlock--twoRow">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Quisquesit amet</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
                 </div>
@@ -227,7 +229,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock services__rightBlock--twoRow">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Adipiscing elit</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
 
@@ -238,7 +240,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock services__rightBlock--twoRow">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Quisquesit amet</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
                 </div>
@@ -253,7 +255,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock services__rightBlock--threeRow">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Molestie at semper</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
                 </div>
@@ -263,7 +265,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock services__rightBlock--threeRow">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Quisque sit amet</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
 
@@ -274,7 +276,7 @@
                         <img src="img/Services/services_button_03.png" alt="">
                     </div>
                     <div class="services__rightBlock services__rightBlock--threeRow">
-                        <div class="services__header">Adipisecting</div>
+                        <div class="services__item-header">Molestie at semper</div>
                         <div class="services__text">Vestibulum tempor interdum tincidunt. Nam feugiat, metus nec laoreet</div>
                     </div>
                 </div>
@@ -283,20 +285,19 @@
     </section>
 
     <!-- section__nextStep -->
-    <section class="section__nextStep">
+
+    <section class="section__nextStep" id="feedback">
 
         <div class="logo__symbol">
             <img src="img/NextStep/LogoSymbol_03.png">
         </div>
+
         <div class="container">
-            <div class="section__header">
-                <div class="section__title">take <span class="color__text"> the next </span>step</div>
-                <div class="section__text">Do you need our help to your brand to its fullest potential?<br>Let us know how we can help you</div>
+            <div class="section__header nextStep__header">
+                <div class="section__title nextStep__title ">take <span class="nextStep__red">the next</span> step</div>
+                <div class="section__text nextStep__text-head ">Do you need our help to your brand to its fullest potential?<br>Let us know how we can help you</div>
             </div>
-        </div>
 
-
-        <div class="container">
             <div class="container__formWraper">
 
                 <form novalidate class="contact_form" action="" method="post" name="contact_form">
@@ -335,7 +336,9 @@
         </div> <!-- container-->
     </section>
 
-    <footer class="footer">
+    <!-- section__footer -->
+
+    <footer class="footer" id="footer">
 
         <div class="footer__wrapper">
             <div class="footer__icon">
@@ -356,6 +359,10 @@
         </div>
 
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="js/common.js"></script>
 
 </body>
 
